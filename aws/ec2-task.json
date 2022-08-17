@@ -1,0 +1,30 @@
+{
+  "family": "sample-ec2", 
+  "networkMode": "awsvpc", 
+  "containerDefinitions": [
+      {
+          "name": "ec2-app", 
+          "image": "jonghwa/code-runner-python:3.10-pandas", 
+          "portMappings": [
+              {
+                  "containerPort": 80, 
+                  "hostPort": 80, 
+                  "protocol": "tcp"
+              }
+          ], 
+          "essential": true, 
+          "entryPoint": [
+              "sh",
+  "-c"
+          ], 
+          "command": [
+              "/usr/bin/python -c \"print ('hello world')\""
+          ]
+      }
+  ], 
+  "requiresCompatibilities": [
+      "EC2"
+  ], 
+  "cpu": "256", 
+  "memory": "512"
+}

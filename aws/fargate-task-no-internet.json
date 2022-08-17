@@ -1,0 +1,24 @@
+{
+  "family": "sample-fargate-nointernet", 
+  "networkMode": "none", 
+  "containerDefinitions": [
+      {
+          "name": "fargate-app", 
+          "image": "jonghwa/code-runner-python:3.10-pandas", 
+ 
+          "essential": true, 
+          "entryPoint": [
+              "sh",
+  "-c"
+          ], 
+          "command": [
+              "/usr/bin/python -c \"print ('hello world')\""
+          ]
+      }
+  ], 
+  "requiresCompatibilities": [
+      "FARGATE"
+  ], 
+  "cpu": "256", 
+  "memory": "512"
+}

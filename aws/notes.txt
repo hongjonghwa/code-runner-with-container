@@ -1,0 +1,26 @@
+# create cluster
+aws ecs create-cluster --cluster-name MyCluster
+
+# register
+aws ecs register-task-definition --cli-input-json file://./fargate-task.json
+aws ecs register-task-definition --cli-input-json file://./ec2-task.json
+
+aws ecs register-task-definition --cli-input-json file://./fargate-task-no-internet.json
+==> An error occurred (ClientException) when calling the RegisterTaskDefinition operation: Fargate only supports network mode ▒▒awsvpc▒▒.
+
+
+# list task
+aws ecs list-task-definitions
+
+# run
+
+aws ecs run-task --task-definition sample-fargate --cluster MyCluster
+
+# describe
+aws ecs describe-task-definition --task-definition sample-ec2
+
+# deregister
+aws ecs deregister-task-definition --task-definition hello-test-wrk:1
+
+
+
