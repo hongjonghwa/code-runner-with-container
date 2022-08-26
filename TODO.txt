@@ -1,0 +1,21 @@
+1. aws 실행 명령 정리
+- awsvpc 설정
+- volume 마운트
+
+2. backend 문항 포맷 정리
+- json 규약
+- validator
+- tester (runnter)
+
+3. backend API 로 정리
+
+
+4. frontend 호출 정리
+
+
+###
+11. eks - nestjs - 빌드 환경
+ - 2 pod
+ - load balancer ( sticky 4 websocker ))
+
+12.

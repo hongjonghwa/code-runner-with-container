@@ -14,7 +14,10 @@ aws ecs list-task-definitions
 
 # run
 
-aws ecs run-task --task-definition sample-fargate --cluster MyCluster
+aws ecs run-task \
+  --task-definition sample-fargate \
+  --cluster CodeRunnerCluster \
+  --network-configuration "awsvpcConfiguration={subnets=[subnet-0a6f77a9e242db996,subnet-09984f4c6c9526527],securityGroups=[sg-022fe6d8f6eaee5b7]}"
 
 # describe
 aws ecs describe-task-definition --task-definition sample-ec2

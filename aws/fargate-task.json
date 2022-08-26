@@ -14,8 +14,7 @@
           ], 
           "essential": true, 
           "entryPoint": [
-              "sh",
-  "-c"
+              "sh", "-c"
           ], 
           "command": [
               "/usr/bin/python -c \"print ('hello world')\""

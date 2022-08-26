@@ -1,0 +1,20 @@
+{
+  "name": "aws-runner",
+  "version": "0.0.1",
+  "scripts": {
+    "register": "ts-node register.ts",
+    "run-task": "ts-node run-task.ts",
+    "deregister": "ts-node deregister.ts",
+    "main": "ts-node index.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ecs": "^3.154.0",
+    "@aws-sdk/client-sts": "^3.154.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.13",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.2"
+  },
+  "license": "MIT"
+}
