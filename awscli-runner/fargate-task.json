@@ -1,29 +1,33 @@
 {
-  "family": "sample-fargate", 
-  "networkMode": "none", 
+  "family": "sample-fargate",
+  "networkMode": "awsvpc",
   "containerDefinitions": [
-      {
-          "name": "fargate-app", 
-          "image": "jonghwa/code-runner-python:3.10-pandas", 
-          "portMappings": [
-              {
-                  "containerPort": 80, 
-                  "hostPort": 80, 
-                  "protocol": "tcp"
-              }
-          ], 
-          "essential": true, 
-          "entryPoint": [
-              "sh", "-c"
-          ], 
-          "command": [
-              "/usr/bin/python -c \"print ('hello world')\""
-          ]
+    {
+      "name": "fargate-app",
+      "image": "193450065746.dkr.ecr.ap-northeast-2.amazonaws.com/code-runner-python:3.10-pandas",
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 80,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "entryPoint": ["sh", "-c"],
+      "command": ["/usr/bin/python -c \"print ('hello world')\""],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/CodeRunner/userTaskLog",
+          "awslogs-region": "ap-northeast-2",
+          "awslogs-stream-prefix": "test-run",
+          "awslogs-create-group": "true"
+        }
       }
-  ], 
-  "requiresCompatibilities": [
-      "FARGATE"
-  ], 
-  "cpu": "256", 
-  "memory": "512"
+    }
+  ],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "2048",
+  "memory": "4096",
+  "executionRoleArn": "arn:aws:iam::193450065746:role/ecsTaskExecutionRole"
 }

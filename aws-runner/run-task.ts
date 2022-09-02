@@ -23,7 +23,7 @@ CodeRunnerStack.Subnets = subnet-0a6f77a9e242db996,subnet-09984f4c6c9526527
       cluster: 'CodeRunnerCluster',
       networkConfiguration: {
         awsvpcConfiguration: {
-          assignPublicIp: 'DISABLED', // default 'DISABLED'
+          assignPublicIp: 'ENABLED', // to access ecr repo
           subnets: ['subnet-0a6f77a9e242db996', 'subnet-09984f4c6c9526527'],
           securityGroups: ['sg-022fe6d8f6eaee5b7'],
         },

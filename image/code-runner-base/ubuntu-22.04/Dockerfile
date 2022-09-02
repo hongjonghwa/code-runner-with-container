@@ -5,6 +5,7 @@ LABEL author="jonghwa.hong@gmail.com"
 RUN useradd -m user -u 9999 && \
     echo "\nexport PS1='$ '" >> ~user/.bashrc && \
     mkdir /CODE && \
-    chown user.user /CODE
+    chown user /CODE && \
+    chgrp user /CODE
 
 VOLUME /CODE

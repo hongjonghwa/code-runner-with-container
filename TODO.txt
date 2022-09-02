@@ -1,3 +1,5 @@
+220901 AWS_runner 권한
+
 1. aws 실행 명령 정리
 - awsvpc 설정
 - volume 마운트
