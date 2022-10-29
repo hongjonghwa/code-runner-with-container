@@ -1,0 +1,5 @@
+https://engineering.loyaltylion.com/running-an-interactive-console-on-amazon-ecs-c692f321b14d
+
+https://stackoverflow.com/questions/71355442/aws-javascript-sdk-retrieving-shell-output-from-ecs-execute-command
+
+https://aws.amazon.com/ko/blogs/containers/new-using-amazon-ecs-exec-access-your-containers-fargate-ec2/
