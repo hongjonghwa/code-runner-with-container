@@ -1,3 +1,3 @@
 python - 3.10.4
-pandas - 1.4.3
-numpy - 1.23.1
+pandas - 1.5.2
+numpy - 1.24.1
